@@ -1,0 +1,33 @@
+<div class="container">
+
+    <mat-form-field appearance="outline" class="full-width" col-50>
+        <mat-label>Nome Científico</mat-label>
+        <input matInput placeholder="Preencha o nome científico" required [(ngModel)]="model.nomeCientifico" required>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline" class="full-width no-margim-right" col-50>
+        <mat-label>Nome Popular</mat-label>
+        <input matInput placeholder="Preencha o nome popular" required [(ngModel)]="model.nomePopular" required type="email">
+    </mat-form-field>
+   
+    <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Propriedades</mat-label>
+        <input matInput placeholder="Preencha as propriedades da planta" required [(ngModel)]="model.propriedades" required>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Utilidade</mat-label>
+        <input matInput placeholder="Preencha a utilidade" required [(ngModel)]="model.utilidade" required>
+    </mat-form-field>
+
+
+    <app-input-file [image]="model.imagem" (select)="selectedFile($event)"></app-input-file>
+
+<div class="tolbar_form">
+    <button mat-raised-button routerLink="/Plantas">Cancelar</button>
+    <button mat-raised-button color="primary" (click)="save()">Salvar</button>
+</div>
+
+</div>
